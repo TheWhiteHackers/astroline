@@ -1,11 +1,11 @@
 
 // name, fuel-needed, heat-shield-needed, stering-fins-needed, hull-needed, landing-gear-needed
 let planetlist = [
-    ["moon", 1, 1, 1, 1, 1],
-    ["mars", 2, 2, 1, 1, 2],
-    ["venus", 2, 5, 3, 4, 3],
-    ["saturn", 4, 3, 4, 5, 4], 
-    ["kepler-70b", 5, 4, 5, 3, 5]
+    ["moon", 1, 1, 1, 1, 1, "moon.png"],
+    ["mars", 2, 2, 1, 1, 2, "mars.png"],
+    ["venus", 2, 5, 3, 4, 3, "venus.png"],
+    ["saturn", 4, 3, 4, 5, 4, "saturn.png"], 
+    ["pluto", 5, 4, 5, 3, 5, "pluto.png"]
 ]
 
 // name, number purchased, distance effect, weight effect (fuel effect), price
@@ -21,7 +21,7 @@ let itemeffects = [
     ["landing gear", 0, 0, 90, 23423432]
 ]
 
-// food-needed, water-needed, oxygen-needed
+// food-needed, water-needed, oxygen-needed per year
 let astroneeds = [1, 2, 3]
 
 window.onload=start();
@@ -29,6 +29,8 @@ window.onload=start();
 // start first planet
 function start(){
     pickPlanet();
+    updateDisplay();
+    document.getElementById("launchbtn").addEventListener("click", launch);
 }
 
 // pick the planets
