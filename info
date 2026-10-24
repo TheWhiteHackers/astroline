@@ -1,0 +1,40 @@
+moon {
+    name: moon
+    fuel-needed: 1
+    heat-shield-needed: 1
+    stering-fins-needed: 1
+    hull-need: 1
+    landing-gear-needed: 1
+}
+mars {
+    name: mars
+    fuel-needed: 2
+    heat-shield-needed: 2
+    stering-fins-needed: 1
+    hull-need: 1
+    landing-gear-needed: 2
+}
+venus {
+    name: venus
+    fuel-needed: 2
+    heat-shield-needed: 5
+    stering-fins-needed: 3
+    hull-need: 4
+    landing-gear-needed: 3
+}
+saturn {
+    name: saturn
+    fuel-needed: 4
+    heat-shield-needed: 3
+    stering-fins-needed: 4
+    hull-need: 5
+    landing-gear-needed: 4
+}
+kepler-70b {
+    name: kepler-70b
+    fuel-needed: 5
+    heat-shield-needed: 4
+    stering-fins-needed: 5
+    hull-need: 3
+    landing-gear-needed: 5
+}

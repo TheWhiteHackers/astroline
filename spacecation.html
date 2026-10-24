@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacecation</title>
+    <link rel="stylesheet" href="spacecation.css" />
+    <script src="spacecation.js" defer></script>
+  </head>
+  <body>
+
+    <div id="nav">
+      <p>information</p>
+      <p id="logo">astroline</p>
+      <p>settings</p>
+    </div>
+
+    <div id="maincontainer">
+      <div id="bigleft">
+        <div id="planetinfo">
+            <h2>Planet: <span id="planetname"></span></h2>
+            <img src="" alt="planet img">
+            <h2>Planet Stats: </h2>
+            <h3>Distance: <span id="planetdistance"></span></h3>
+            <h3>Atmospheric Density: <span id="planetdensity"></span></h3>
+            <h3>Wind Speed: <span id="planetwind"></span></h3>
+            <h3>Surface Pressure: <span id="planetpressure"></span></h3>
+            <h3>Surface Gravity: <span id="planetgravity"></span></h3>
+        </div>
+        <div id="statinfo">
+            <h3>Cost: <span id="totalcost"></span></h3>
+            <h3>Weight: <span id="weight"></span></h3>
+            <h3></h3>
+        </div>
+      </div>
+      
+      <div id="bigmid">
+        <h1>Updates</h1>
+
+        <div id="grid">
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/astronaut.png" alt="astronaut">
+            <p class="name">astronaut - <span id="astronautnum">0</span></p>
+            <p>$100</p>
+            <p>+100 mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/food.png" alt="food">
+            <p class="name">food - <span id="foodnum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/water.png" alt="water">
+            <p class="name">water - <span id="waternum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/oxygen.png" alt="oxygen">
+            <p class="name">oxygen - <span id="oxygennum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/fuel.png" alt="fuel">
+            <p class="name">fuel - <span id="fuelnum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/heatshield.png" alt="shield">
+            <p class="name">shield - <span id="shieldnum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/astronaut.png" alt="steering fins">
+            <p class="name">steering fins - <span id="steeringfinnum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/hull.png" alt="hull">
+            <p class="name">hull - <span id="hullnum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+          <div class="partofgrid" onclick="getItem()">
+            <img src="imgs/astronaut.png" alt="landing gear">
+            <p class="name">landing gear - <span id="landingnum">0</span></p>
+            <p>$100</p>
+            <p>+100mi -5 food</p>
+          </div>
+
+          
+
+        </div>
+        
+      </div>
+      
+      <div id="bigright">
+          <img src="" alt="rocket img">
+          <img src="" alt="asteroid img">
+          <button id="launchbtn">launch spaceship!</button>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
