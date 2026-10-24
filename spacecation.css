@@ -15,9 +15,14 @@ body {
   align-items: row;
   gap: 20px;
   color: white;
+  margin-bottom: 10px;
 }
 #logo{
   color: #ff1492;
+}
+a{
+  text-decoration: none;
+  color:white
 }
 #maincontainer {
   width: 90%;

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,9 +10,9 @@
   <body>
 
     <div id="nav">
-      <p>information</p>
-      <p id="logo">astroline</p>
-      <p>settings</p>
+      <a href="information.html">info</a>
+      <a href="spacecation.html" id="logo">astroline</a>
+      <a href="setting.html">setting</a>
     </div>
 
     <div id="maincontainer">
@@ -75,8 +75,8 @@
             <p>+100mi -5 food</p>
           </div>
           <div class="partofgrid" onclick="getItem()">
-            <img src="imgs/astronaut.png" alt="steering fins">
-            <p class="name">steering fins - <span id="steeringfinnum">0</span></p>
+            <img src="imgs/steeringthruster.png" alt="steering fins">
+            <p class="name">thrusters - <span id="thrusternnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
@@ -87,7 +87,7 @@
             <p>+100mi -5 food</p>
           </div>
           <div class="partofgrid" onclick="getItem()">
-            <img src="imgs/astronaut.png" alt="landing gear">
+            <img src="imgs/landinggear.png" alt="landing gear">
             <p class="name">landing gear - <span id="landingnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
@@ -106,6 +106,18 @@
       </div>
     </div>
 
-    
+    <!-- popup for ending
+    <div id="shadow"></div>
+    <div id="endpopup">
+        <h2>Mission <span id="result"></span></h2>
+        <h3>Points Earned: <span id="points"></span></h3>
+        
+        <button>End!</button>
+        <button>Continue!</button>
+    </div>
+    -->
+
+
+
   </body>
 </html>
