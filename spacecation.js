@@ -273,7 +273,7 @@ function getRequirements() {
         ["oxygen",        oxygen,      itemeffects[3][1]],
         ["fuel",          fuelNeeded,  itemeffects[4][1]],
         ["shield",        needs.shield, itemeffects[5][1]],
-        ["fins",          needs.fins,  itemeffects[6][1]],
+        ["thruster",          needs.fins,  itemeffects[6][1]],
         ["hull",          needs.hull,  itemeffects[7][1]],
         ["landing gear",  needs.gear,  itemeffects[8][1]]
     ];
