@@ -80,11 +80,10 @@ The checklist always says **OK** or **NEED** in words, so it never relies on col
 
 - No frameworks, libraries or boilerplate code: plain HTML, CSS and JavaScript.
 - Fonts: [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans) from Google Fonts, and [OpenDyslexic](https://fontsource.org/fonts/opendyslexic) from Fontsource (loaded through jsDelivr).
-- **AI-assisted code:** our team wrote the HTML pages and some of the JavaScript. For the more complicated parts we used AI (Claude, by Anthropic), including:
-  - the game logic: the requirements checklist, the rocket equation, budget checks and scoring
+- **AI-assisted code:** our team wrote the HTML pages, most of the CSS, and some of the JavaScript. For the more complicated parts we used AI (Claude, by Anthropic), including:
+  - some game logic: the requirements checklist, the rocket equation, budget checks and scoring
   - the accessibility settings system (`settings.js` and `accessibility.css`)
-  - the rocket blast-off and shake animations
-  - most of the page styling (CSS) and layout fixes
+  - some of the page styling (CSS) and layout fixes
 
 ## Prerequisites
 
@@ -94,7 +93,11 @@ Just a web browser. There is nothing to install or build. An internet connection
 
 ```sh
 # Clone the project
-git clone https://github.com/TheWhiteHackers/spaceaction.git && cd spaceaction
+git clone https://github.com/TheWhiteHackers/astroline.git && cd astroline
 ```
 
 Then open `information.html` in your browser (double-click it, or drag it into a browser window) and press **Play!**
+
+## Extras
+
+All visuals are made by us using Pixelart.com

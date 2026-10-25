@@ -217,25 +217,9 @@ function launch() {
 
     let launchBtn = document.getElementById("launchbtn");
     launchBtn.disabled = true;
-    playRocket(success, function () {
-        launchBtn.disabled = false;
-        showResult(success, points, missing);
-    });
+    showResult(success, points, missing);
 }
 
-function playRocket(success, whenDone) {
-    let rocket = document.getElementById("rocketbox");
-
-    rocket.classList.remove("liftoff", "shake");
-    void rocket.offsetWidth;
-    rocket.classList.add(success ? "liftoff" : "shake");
-
-    let waitTime = success ? 2000 : 600;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        waitTime = 0;
-    }
-    setTimeout(whenDone, waitTime);
-}
 
 function totalCost() {
     let cost = 0;
@@ -417,5 +401,4 @@ function closeResult() {
     if (shadow) { shadow.remove(); }
     if (box) { box.remove(); }
 
-    document.getElementById("rocketbox").classList.remove("liftoff", "shake");
 }
