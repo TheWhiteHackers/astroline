@@ -44,7 +44,7 @@ Users can pick their budget and target space location to see the equipment and t
 | Planet stats (distance, atmosphere, wind, pressure, gravity, temperature) | Real values per planet | [NASA Planetary Fact Sheets](https://nssdc.gsfc.nasa.gov/planetary/factsheet/) |
 | Food, water and oxygen per astronaut | 2.39 kg food, 2.79 kg water, 0.89 kg oxygen per day | Ewert & Stromgren, NASA ICES-2019-126 ([NTRS](https://ntrs.nasa.gov/citations/20190027563)) |
 | Delta-v (speed change needed to get from Earth orbit to each planet) | Moon 3.2, Mars 3.6, Venus 3.5, Saturn 7.3, Pluto 8.2 km/s | [Delta-v budget (Wikipedia)](https://en.wikipedia.org/wiki/Delta-v_budget) |
-| Engine efficiency for the rocket equation | 465.5 s specific impulse (RL10B-2 engine) | [L3Harris RL10 spec sheet](https://en.wikipedia.org/wiki/RL10) |
+| Engine efficiency for the rocket equation | 465.5 s specific impulse (RL10B-2 engine) | [RL10 Engine](https://en.wikipedia.org/wiki/RL10) |
 | Astronaut price | $55 million per seat (SpaceX Crew Dragon) | NASA Office of Inspector General, 2019 ([CNBC](https://www.cnbc.com/2019/11/19/nasa-cost-to-fly-astronauts-with-spacex-boeing-and-russian-soyuz.html)) |
 | Price of everything else | Weight × $2,720 per kg (Falcon 9 launch price to low Earth orbit) | [NASA conference paper](https://ntrs.nasa.gov/api/citations/20200001093/downloads/20200001093.pdf) |
 
