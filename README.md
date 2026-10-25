@@ -2,7 +2,7 @@
 
   # Astroline!
 
-  A space mission planner built on real NASA data: pick a planet, pack your ship, and find out what it really takes to keep humans alive beyond Earth.
+  Every trip has a price tag. And that requires planning. Mix that in with space travel. Where there are no gas stations, no restaurants, no extra resources, the risks are higher, and the cost of a mistake is more costly. Astroline provides a tool for all space travelers to figure out the items, equipment, and budget needed for their trip. Based on their choices, space voyagers can see the success of their trip prior to flying!
 
 </div>
 
@@ -22,13 +22,14 @@
 
 </div>
 
-If humans are going to live beyond Earth one day, someone has to plan how to get them there and keep them alive. Astroline lets you try. You pick a destination (the Moon, Mars, Venus, Saturn or Pluto), set a budget, and pack a ship with astronauts, food, water, oxygen, fuel, a hull, heat shields, steering thrusters and landing gear.
+As the demand for space travel increases and people want to live in space stations far away, there needs to be a way to calculate the trip's price, the needs for each tourist, and the specific ship upgrades for each trip. 
+ 
+Astroline is an expansive tool for astronauts and future space tourists. We wanted to build a platform that actually calculates the constraints of a real flight, such as budget, weight, and survival necessities.
 
-The numbers come from real space data. Every astronaut needs real amounts of food, water and oxygen each day. Fuel is worked out with the rocket equation, the same formula real mission planners use. Prices are based on real launch costs. When every line on the checklist shows **OK** and you're still under budget, you can launch: the rocket blasts off if your plan works and shakes if it doesn't.
+Users can pick their budget and target space location to see the equipment and the success of the trip.
 
-The game shows why sustainable space travel is so hard. Every kilogram of supplies needs fuel to carry it, and that fuel needs more fuel to carry it.
 
-### How to play
+#### How to play
 
 1. Pick a planet
 2. Set your budget (it starts at $150 million)
@@ -36,7 +37,7 @@ The game shows why sustainable space travel is so hard. Every kilogram of suppli
 4. Get every line on the checklist to **OK**
 5. Launch!
 
-### The real data behind it
+#### The real data behind it
 
 | What | Value used | Source |
 | --- | --- | --- |
@@ -56,7 +57,7 @@ What's simplified for the game:
 - Every mission lasts 10 days. One food, water or oxygen crate holds 10 astronaut-days of supplies.
 - Pluto's air density and wind speed aren't listed by NASA, so those are estimates.
 
-### Accessibility
+#### Accessibility
 
 The settings page has three options that are saved in your browser and apply on every page:
 
@@ -66,7 +67,7 @@ The settings page has three options that are saved in your browser and apply on 
 
 The checklist always says **OK** or **NEED** in words, so it never relies on color alone. Every item card can be used with the keyboard: Tab to move, Enter to buy, Delete to remove. The rocket animations turn off by themselves if your computer is set to reduce motion.
 
-### Pages
+#### Pages
 
 | File | What it is |
 | --- | --- |
@@ -76,7 +77,7 @@ The checklist always says **OK** or **NEED** in words, so it never relies on col
 | `accessibility.css` | Styles for the accessibility options, shared by every page |
 | `imgs/` | Planet, item and rocket pictures |
 
-### Tools, libraries and AI use
+#### Tools, Libraries and AI use
 
 - No frameworks, libraries or boilerplate code: plain HTML, CSS and JavaScript.
 - Fonts: [Pixelify Sans](https://fonts.google.com/specimen/Pixelify+Sans) from Google Fonts, and [OpenDyslexic](https://fontsource.org/fonts/opendyslexic) from Fontsource (loaded through jsDelivr).
@@ -100,4 +101,4 @@ Then open `information.html` in your browser (double-click it, or drag it into a
 
 ## Extras
 
-All visuals are made by us using Pixelart.com
+All visuals are made by us using Pixilart.com
