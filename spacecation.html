@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spacecation</title>
     <link rel="stylesheet" href="spacecation.css" />
+    <link rel="stylesheet" href="accessibility.css" />
+    <script src="settings.js"></script>
     <script src="spacecation.js" defer></script>
   </head>
   <body>
@@ -16,108 +18,112 @@
     </div>
 
     <div id="maincontainer">
+
       <div id="bigleft">
         <div id="planetinfo">
+            <h3>Pick a planet:</h3>
+            <div id="planetpicker"></div>
             <h2>Planet: <span id="planetname"></span></h2>
-            <img src="" alt="planet img">
+            <img id="planetimg" src="" alt="planet img">
             <h2>Planet Stats: </h2>
             <h3>Distance: <span id="planetdistance"></span></h3>
             <h3>Atmospheric Density: <span id="planetdensity"></span></h3>
             <h3>Wind Speed: <span id="planetwind"></span></h3>
             <h3>Surface Pressure: <span id="planetpressure"></span></h3>
             <h3>Surface Gravity: <span id="planetgravity"></span></h3>
-        </div>
-        <div id="statinfo">
-            <h3>Cost: <span id="totalcost"></span></h3>
-            <h3>Weight: <span id="weight"></span></h3>
-            <h3></h3>
+            <h3>Temperature: <span id="planettemp"></span></h3>
+            <h3>Delta-v from Earth orbit: <span id="planetdeltav"></span></h3>
         </div>
       </div>
-      
+
       <div id="bigmid">
         <h1>Updates</h1>
 
+        <div id="budgetbox">
+          <label for="budgetinput">Your budget ($):</label>
+          <input type="number" id="budgetinput" min="1" step="1000000">
+        </div>
+
         <div id="grid">
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/astronaut.png" alt="astronaut">
             <p class="name">astronaut - <span id="astronautnum">0</span></p>
             <p>$100</p>
             <p>+100 mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/food.png" alt="food">
             <p class="name">food - <span id="foodnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/water.png" alt="water">
             <p class="name">water - <span id="waternum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/oxygen.png" alt="oxygen">
             <p class="name">oxygen - <span id="oxygennum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/fuel.png" alt="fuel">
             <p class="name">fuel - <span id="fuelnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/heatshield.png" alt="shield">
             <p class="name">shield - <span id="shieldnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/steeringthruster.png" alt="steering fins">
             <p class="name">thrusters - <span id="thrusternnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/hull.png" alt="hull">
             <p class="name">hull - <span id="hullnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
-          <div class="partofgrid" onclick="getItem()">
+          <div class="partofgrid">
             <img src="imgs/landinggear.png" alt="landing gear">
             <p class="name">landing gear - <span id="landingnum">0</span></p>
             <p>$100</p>
             <p>+100mi -5 food</p>
           </div>
 
-          
-
         </div>
-        
-      </div>
-      
-      <div id="bigright">
-          <img src="" alt="rocket img">
-          <img src="" alt="asteroid img">
+
+        <div id="actions">
           <button id="launchbtn">launch spaceship!</button>
+          <button id="resetbtn">reset items</button>
+        </div>
+
+      </div>
+
+      <div id="bigright">
+        <div id="rocketbox">
+          <img id="rocket" src="imgs/rocket.png" alt="your rocket">
+          <div id="flame"></div>
+        </div>
+        <div id="statinfo">
+            <h3>Cost: <span id="totalcost"></span></h3>
+            <h3>Weight: <span id="weight"></span></h3>
+            <h3>Budget left: <span id="budgetleft"></span></h3>
+            <h3>Score: <span id="score"></span></h3>
+            <p id="message" aria-live="polite"></p>
+            <div id="requirements"></div>
+        </div>
       </div>
     </div>
-
-    <!-- popup for ending
-    <div id="shadow"></div>
-    <div id="endpopup">
-        <h2>Mission <span id="result"></span></h2>
-        <h3>Points Earned: <span id="points"></span></h3>
-        
-        <button>End!</button>
-        <button>Continue!</button>
-    </div>
-    -->
-
-
 
   </body>
 </html>

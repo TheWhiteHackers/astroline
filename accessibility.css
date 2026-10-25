@@ -1,0 +1,39 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic/index.css');
+
+html.dyslexia body, html.dyslexia button, html.dyslexia input, html.dyslexia select {
+  font-family: "OpenDyslexic", Verdana, sans-serif !important;
+}
+
+html.large-text {
+  font-size: 125%;
+}
+
+html.large-text button, html.large-text input, html.large-text select {
+  font-size: 1rem;
+}
+
+.req-ok {
+  color: #3ddc84;
+}
+.req-need {
+  color: #ff6b6b;
+}
+
+html.colorblind .req-ok {
+  color: #56b4e9;
+}
+html.colorblind .req-need {
+  color: #e69f00;
+}
+html.colorblind #logo {
+  color: #e69f00;
+}
+html.colorblind .name {
+  color: #0072b2;
+}
+html.colorblind .planetbtn.selected {
+  border-color: #e69f00;
+}
+html.colorblind #launchbtn, html.colorblind #playbtn {
+  background-color: #d55e00;
+}

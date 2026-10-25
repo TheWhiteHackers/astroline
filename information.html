@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spacecation</title>
     <link rel="stylesheet" href="information.css" />
+    <link rel="stylesheet" href="accessibility.css" />
+    <script src="settings.js"></script>
   </head>
   <body>
 
@@ -14,18 +16,28 @@
       <a href="setting.html">setting</a>
     </div>
 
-    <h2>How to Play</h2>
-    <p>first smtklj ake slke skldfj we ewlksjrsd lwkejr dskljrew kler <br>
-       
-    </p>
-  
-    <h2>Backed By NASA's data</h2>
+    <div id="pictures">
+      <img src="imgs/rocket.png" alt="rocket">
+      <img src="imgs/galaxy.png" alt="galaxy">
+    </div>
 
+    <main id="infocontent">
 
-    <h2>Sources</h2>
-    
+      <section class="infocard">
+        <h2>How to Play</h2>
+        <ol>
+          <li>Pick a planet</li>
+          <li>Set your budget</li>
+          <li>Click items to buy<br>(<strong>−</strong> removes one)</li>
+          <li>Get every line to <strong>OK</strong></li>
+          <li>Launch!</li>
+        </ol>
+        <p class="tip">More astronauts = more points, but they need more food, water and oxygen.</p>
+      </section>
 
+    </main>
 
+    <a href="spacecation.html" id="playbtn">Play!</a>
 
   </body>
 </html>

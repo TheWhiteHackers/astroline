@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spacecation</title>
     <link rel="stylesheet" href="spacecation.css" />
-    <script src="spacecation.js" defer></script>
+    <link rel="stylesheet" href="setting.css" />
+    <link rel="stylesheet" href="accessibility.css" />
+    <script src="settings.js"></script>
   </head>
   <body>
 
@@ -17,11 +19,47 @@
 
     <h1>Change Settings</h1>
 
-    <button>Bigger Font Size</button>
-    <button>Colorblind Colors</button>
-    
+    <p id="settingsintro">
+      These settings make Spacecation easier to see and read.
+      Click a button to turn it ON or OFF. Your choices are saved and work on every page.
+    </p>
 
+    <div id="settingslist">
 
+      <div class="setting">
+        <button data-setting="largeText" onclick="toggleSetting('largeText')" aria-describedby="largetext-info">
+          Bigger Font Size: <span class="state">OFF</span>
+        </button>
+        <p id="largetext-info" class="settinginfo">
+          Makes all the words on every page about a quarter bigger, so they're easier to read.
+        </p>
+      </div>
+
+      <div class="setting">
+        <button data-setting="colorblind" onclick="toggleSetting('colorblind')" aria-describedby="colorblind-info">
+          Colorblind Colors: <span class="state">OFF</span>
+        </button>
+        <p id="colorblind-info" class="settinginfo">
+          Swaps red, green and pink for blue and orange, which most people with color blindness can tell apart.
+          The checklist also says OK or NEED, so you never have to go by color alone.
+        </p>
+      </div>
+
+      <div class="setting">
+        <button data-setting="dyslexia" onclick="toggleSetting('dyslexia')" aria-describedby="dyslexia-info">
+          Dyslexia Font: <span class="state">OFF</span>
+        </button>
+        <p id="dyslexia-info" class="settinginfo">
+          Changes the text to OpenDyslexic, a font with heavier bottoms on the letters so they're less likely
+          to look flipped or jumbled. Some people with dyslexia find it easier to read. (Needs internet to load.)
+        </p>
+      </div>
+
+    </div>
+
+    <p id="motioninfo">
+      Rocket animations turn off by themselves if your computer is set to reduce motion.
+    </p>
 
   </body>
 </html>

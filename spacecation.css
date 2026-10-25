@@ -17,74 +17,156 @@ body {
   color: white;
   margin-bottom: 15px;
 }
+
 #logo{
   color: #ff1492;
 }
+
 a{
   text-decoration: none;
   color:white
 }
+
 #maincontainer {
   width: 90%;
-  height: 490px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
+  gap: 20px;
 }
-
-/* ---- left box -----------------------*/
 
 #bigleft {
   width: 30%;
-  height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
+
 #planetinfo{
   width: 100%;
-  height: 80%;
   color: orange;
 }
+
 #statinfo{
   width: 100%;
-  height: 20%;
   color: white;
-  
+  margin-top: 10px;
 }
 
-/* ---- mid box -----------------------*/
+#planetinfo h2, #planetinfo h3, #statinfo h3{
+  margin: 6px 0;
+}
+
+#planetimg{
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+#planetpicker{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.planetbtn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 4px;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  cursor: pointer;
+}
+.planetbtn img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.planetbtn:hover{
+  border-color: #c9ffff;
+}
+
+.planetbtn.selected{
+  border-color: #ff1492;
+}
+
+#budgetbox{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#budgetinput{
+  font-family: "Pixelify Sans", sans-serif;
+  padding: 4px;
+  width: 150px;
+  border: 2px solid #000042;
+  border-radius: 8px;
+}
+
+#message{
+  color: #ffd166;
+  min-height: 1em;
+  margin: 4px 0;
+}
+
+#requirements p{
+  margin: 2px 0;
+}
+
+#requirements .ok{
+  color: #3ddc84;
+}
+#requirements .need{
+  color: #ff6b6b;
+}
+
+#requirements .hint{
+  margin-top: 10px;
+}
 
 #bigmid {
   background-color: #fff;
   width: 40%;
-  height: 100%;
+  padding-bottom: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   color: #000042;
   border-radius: 20px;
-  
+
 }
+
 #bigmid img{
   width: 50px;
   height: 50px;
 }
+
 #bigmid p{
     margin: 0px;
 }
+
 #grid {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 450px;
+  max-width: 100%;
   flex-wrap: wrap;
   gap: 5px;
 }
+
 .partofgrid{
     display: flex;
     justify-content: flex-start;
@@ -94,27 +176,68 @@ a{
     width: 130px;
     border-radius: 10px;
     border: 3px solid #000042;
-
+    cursor: pointer;
+    user-select: none;
+    position: relative;
 }
+
+.minusbtn{
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #000042;
+  border-radius: 50%;
+  background-color: white;
+  color: #000042;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+}
+.minusbtn:hover{
+  background-color: #ffd6d6;
+}
+
+.minusbtn:disabled{
+  opacity: 0.3;
+  cursor: default;
+}
+
 .partofgrid:hover{
     background-color: #c9ffff;
 }
+
 .name {
     color: #ff1492;
 }
 
-/* ---- right box -----------------------*/
-#bigright {
-  width: 30%;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+#actions{
   display: flex;
-  
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
 }
 
-#launchbtn{
+#bigright {
+  width: 30%;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+#bigright img{
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+#launchbtn, #resetbtn{
   border: none;
   padding: 15px 25px;
   border-radius: 20px;
@@ -124,3 +247,77 @@ a{
   margin-bottom: 10px;
 }
 
+#resetbtn{
+  background-color: #000042;
+}
+
+#launchbtn:disabled{
+  opacity: 0.5;
+}
+
+#rocketbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  position: relative;
+}
+#rocket{
+  width: 100px;
+}
+
+#flame{
+  width: 30px;
+  height: 50px;
+  background: linear-gradient(#fff3a0, #ffb000, #ff3c00);
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  transform-origin: top;
+  visibility: hidden;
+
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 15px);
+}
+
+.liftoff #flame{
+  visibility: visible;
+  animation: flicker 0.1s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: scaleY(1);   }
+  to   { transform: scaleY(1.4); }
+}
+
+@keyframes liftoff {
+  0%   { transform: translate(0, 0);      opacity: 1; }
+  5%   { transform: translate(-3px, 0); }
+  10%  { transform: translate(3px, 0); }
+  15%  { transform: translate(-3px, 0); }
+  20%  { transform: translate(3px, 0); }
+  25%  { transform: translate(-3px, 0); }
+  30%  { transform: translate(0, 0);      opacity: 1; animation-timing-function: ease-in; }
+  100% { transform: translate(0, -800px); opacity: 0; }
+}
+
+.liftoff{
+  animation: liftoff 2s linear forwards;
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0)     rotate(0deg); }
+  20%  { transform: translateX(-10px) rotate(-5deg); }
+  40%  { transform: translateX(10px)  rotate(5deg); }
+  60%  { transform: translateX(-10px) rotate(-5deg); }
+  80%  { transform: translateX(10px)  rotate(5deg); }
+  100% { transform: translateX(0)     rotate(0deg); }
+}
+.shake{
+  animation: shake 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liftoff, .shake, .liftoff #flame{
+    animation: none;
+  }
+}

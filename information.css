@@ -18,10 +18,74 @@ body {
   color: white;
   margin-bottom: 10px;
 }
+
 #logo{
   color: #ff1492;
 }
+
 a{
   text-decoration: none;
   color:white
+}
+
+#pictures{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#pictures img{
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+#infocontent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 400px;
+  width: 95%;
+  margin-top: 15px;
+}
+
+.infocard{
+  flex: 1 1 250px;
+  border: 2px solid #c9ffff;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+
+.infocard h2{
+  color: orange;
+  margin: 5px 0 10px;
+}
+
+.infocard li{
+  margin-bottom: 6px;
+}
+
+.tip{
+  font-size: 0.9em;
+  opacity: 0.85;
+}
+
+.infocard a{
+  color: #c9ffff;
+  text-decoration: underline;
+}
+
+#playbtn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 40px;
+  border-radius: 20px;
+  background-color: #f31b3f;
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+#playbtn:hover{
+  background-color: #ff4d6a;
 }

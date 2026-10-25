@@ -4,4 +4,40 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: #000042;
+  color: white;
+}
+
+#settingsintro, #motioninfo{
+  max-width: 500px;
+  text-align: center;
+}
+
+#settingslist{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 500px;
+  max-width: 90%;
+}
+
+.setting{
+  border: 2px solid #c9ffff;
+  border-radius: 15px;
+  padding: 12px 15px;
+}
+
+.setting button{
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #c9ffff;
+  color: #000042;
+  cursor: pointer;
+}
+
+.settinginfo{
+  margin: 8px 0 0;
+  line-height: 1.4;
 }
