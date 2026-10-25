@@ -35,7 +35,15 @@ a{
   flex-direction: row;
   gap: 20px;
 }
-
+button {
+  border: none;
+  background-color: #000042;
+  color: white;
+  font-family: "Pixelify Sans", sans-serif;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
 #bigleft {
   width: 30%;
   display: flex;
